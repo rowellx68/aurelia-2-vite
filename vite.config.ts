@@ -1,6 +1,8 @@
-import { defineConfig } from 'vite'
+import { defineConfig, PluginOption } from 'vite'
 import { resolve } from 'path'
 import html from 'rollup-plugin-html'
+import pluginAurelia from './rollup-plugin-aurelia'
+import ts from '@rollup/plugin-typescript'
 
 export default defineConfig({
   resolve: {
@@ -8,5 +10,5 @@ export default defineConfig({
       module: resolve(__dirname, 'src/module')
     }
   },
-  plugins: [html()]
+  plugins: [pluginAurelia() as PluginOption]
 })

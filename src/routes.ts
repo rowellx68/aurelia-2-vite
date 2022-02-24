@@ -9,7 +9,7 @@ const routes: Routeable[] = [
   },
   {
     id: 'account',
-    path: '/account',
+    path: 'account',
     component: import('./modules/account/account-page'),
     title: 'My Account'
   }
